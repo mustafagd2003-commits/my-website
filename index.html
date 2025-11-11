@@ -1,0 +1,62 @@
+index.html
+MyWebsite/
+├── index.html
+├── wallpapers.html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع العمر</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: rgba(0, 128, 128, 0.8);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: rgba(0, 128, 128, 1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>مرحبا بك في موقع العمر!</h1>
+    <p>اضغط الزر لتنتقل لمجموعة الخلفيات الرائعة</p>
+    <button onclick="location.href='wallpapers.html'">ادخل الآن</button>
+  </div>
+</body>
+</html>

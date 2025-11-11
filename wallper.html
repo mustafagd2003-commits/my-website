@@ -1,0 +1,94 @@
+wallpers.html
+MyWebsite/
+├── index.html
+├── wallpapers.html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مجموعة الخلفيات</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    }
+
+    .slides img {
+      width: 100%;
+      display: none;
+      border-radius: 12px;
+    }
+
+    button.back {
+      margin: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #008080;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button.back:hover {
+      background-color: #005757;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>مجموعة الخلفيات الرائعة</h1>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="خلفية 1">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="خلفية 2">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="خلفية 3">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="خلفية 4">
+      <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3" alt="خلفية 5">
+      <img src="https://images.unsplash.com/photo-1508923567004-3a6b8004f3d0" alt="خلفية 6">
+      <img src="https://images.unsplash.com/photo-1516912488645-90f81e3d1b6c" alt="خلفية 7">
+      <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702" alt="خلفية 8">
+      <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc" alt="خلفية 9">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="خلفية 10">
+    </div>
+  </div>
+
+  <button class="back" onclick="location.href='index.html'">العودة للصفحة الرئيسية</button>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slides img');
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = 'block';
+      setTimeout(showSlides, 1500); // تغير الصورة كل 1.5 ثانية
+    }
+
+    showSlides();
+  </script>
+<button onclick="location.href='index.html'">العودة للصفحة الرئيسية</button>
+</body>
+</html>
